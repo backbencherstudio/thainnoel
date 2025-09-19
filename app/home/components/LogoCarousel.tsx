@@ -1,0 +1,56 @@
+'use client';
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
+
+const logos = [
+  '/logos/logo1.svg',
+  '/logos/logo2.svg',
+  '/logos/logo3.svg',
+  '/logos/logo4.svg',
+  '/logos/logo5.svg',
+  '/logos/logo6.svg',
+  '/logos/logo5.svg',
+  '/logos/logo4.svg',
+  '/logos/logo3.svg',
+  '/logos/logo2.svg',
+  '/logos/logo1.svg',
+  '/logos/logo2.svg',
+  '/logos/logo3.svg',
+  '/logos/logo4.svg',
+  '/logos/logo5.svg',
+  '/logos/logo6.svg',
+  '/logos/logo5.svg',
+  '/logos/logo4.svg',
+  '/logos/logo3.svg',
+  '/logos/logo2.svg',
+   
+
+];
+
+const LogoCarousel = () => {
+  return (
+    <section id="logoCarousel" className=" py-12 md:py-20">
+      <div className="flex flex-col gap-6 md:gap-12 ">
+        <div className=" text-center  text-zinc-950 text-xl md:text-3xl font-semibold font-Poppins leading-10">Our Trusted Technology Partners</div>
+        <div className="flex flex-col gap-4 md:gap-9 ">
+          <Marquee speed={60} direction="left" gradient>
+            <div className="flex gap-14">
+              {logos.map((logo, index) => (
+                <img key={index} src={logo} alt={`logo ${index}`} className="  " />
+              ))}
+            </div>
+          </Marquee>
+          <Marquee speed={60} direction="right" gradient>
+            <div className="flex gap-14">
+              {logos.map((logo, index) => (
+                <img key={index} src={logo} alt={`logo ${index}`} className="  " />
+              ))}
+            </div>
+          </Marquee>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default LogoCarousel;
