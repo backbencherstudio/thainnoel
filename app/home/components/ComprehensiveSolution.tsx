@@ -13,9 +13,9 @@ const ComprehensiveSolution = () => {
             <div className='bg-[#F6F8FA] overflow-hidden p-3 sm:p-4 md:p-5 lg:p-10 flex flex-col lg:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8'>
                 <Tabs defaultValue="founders" className="w-full lg:max-w-[498px] gap-4">
                     <TabsList className='bg-white w-full lg:w-fit rounded-none gap-0 sm:gap-2 md:gap-3 py-3 sm:py-4 md:py-7 px-2 md:px-3 flex flex-col sm:flex-row'>
-                        <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-700 px-2 sm:px-3 md:px-3 py-2 sm:py-3 md:py-4 rounded-none transition text-xs sm:text-sm md:text-base" value="founders">For Founders</TabsTrigger>
-                        <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-700 px-2 sm:px-3 md:px-3 py-2 sm:py-3 md:py-4 rounded-none transition text-xs sm:text-sm md:text-base" value="operations">For Operations Leads</TabsTrigger>
-                        <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-700 px-2 sm:px-3 md:px-3 py-2 sm:py-3 md:py-4 rounded-none transition text-xs sm:text-sm md:text-base" value="teams">For Teams</TabsTrigger>
+                        <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-700 px-2 sm:px-3 md:px-3 py-2 sm:py-3 md:py-4 rounded-none transition text-xs sm:text-sm md:text-base whitespace-nowrap" value="founders">For Founders</TabsTrigger>
+                        <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-700 px-2 sm:px-3 md:px-3 py-2 sm:py-3 md:py-4 rounded-none transition text-xs sm:text-sm md:text-base whitespace-nowrap" value="operations">For Operations Leads</TabsTrigger>
+                        <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-700 px-2 sm:px-3 md:px-3 py-2 sm:py-3 md:py-4 rounded-none transition text-xs sm:text-sm md:text-base whitespace-nowrap" value="teams">For Teams</TabsTrigger>
                     </TabsList>
                     <TabsContent value="founders">
                         <div className='w-full lg:max-w-[498px] flex flex-col gap-4 sm:gap-6 md:gap-8'> 

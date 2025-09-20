@@ -33,17 +33,17 @@ const LogoCarousel = () => {
       <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-12">
         <div className="text-center text-zinc-950 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold font-Poppins leading-tight md:leading-10">Our Trusted Technology Partners</div>
         <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-9">
-          <Marquee speed={60} direction="left" gradient>
+          <Marquee speed={60} direction="left" gradient gradientWidth={50}>
             <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14">
               {logos.map((logo, index) => (
-                <img key={index} src={logo} alt={`logo ${index}`} className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
+                <img key={index} src={logo} alt={`logo ${index}`} className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
               ))}
             </div>
           </Marquee>
-          <Marquee speed={60} direction="right" gradient>
+          <Marquee speed={60} direction="right" gradient gradientWidth={50}>
             <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14">
               {logos.map((logo, index) => (
-                <img key={index} src={logo} alt={`logo ${index}`} className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
+                <img key={index} src={logo} alt={`logo ${index}`} className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
               ))}
             </div>
           </Marquee>

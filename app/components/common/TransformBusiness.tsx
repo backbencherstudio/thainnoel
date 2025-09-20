@@ -14,8 +14,8 @@ const TransformBusiness = () => {
     return (
         <div className='flex flex-col custom-Container gap-8 sm:gap-10 md:gap-12 py-16 sm:py-20 md:py-24'>
             <div className='flex flex-col lg:flex-row  justify-between items-start lg:items-end gap-6 sm:gap-8'>
-                <div className="w-full max-w-[562px] text-black text-3xl sm:text-4xl md:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px]">Ready to Transform Your Business?</div>
-                <div className="w-full lg:max-w-96 lg:text-right text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">Get a free consultation and discover Wow we can optimize your operations</div>
+                <div className="w-full max-w-[562px] text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px]">Ready to Transform Your Business?</div>
+                <div className="w-full lg:max-w-96 lg:text-right text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">Get a free consultation and discover how we can optimize your operations</div>
             </div>
             <div className='flex flex-col  md:flex-row justify-between gap-6 sm:gap-8'>
                 <div className='h-auto sm:h-[800px] md:h-[939px] max-w-[720px] w-full items-start'>
