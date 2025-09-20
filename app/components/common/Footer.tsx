@@ -43,7 +43,7 @@ const Footer = () => {
               <Link href="/contact" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Contact Us</Link>
             </div>
           </div>
-          {/* Legalss */}
+          {/* Legals */}
           <div className='flex flex-col gap-7.5 w-fit'>
             <div className="justify-start text-white text-lg font-bold font-['Inter'] leading-loose">Legals</div>
             <div className='flex flex-col gap-4'>
