@@ -3,14 +3,14 @@ import React from 'react'
 
 const OurService = () => {
     return (
-        <div className='flex flex-col custom-Container gap-6 sm:gap-8 md:gap-12 pb-12 sm:pb-16 md:pb-25 pt-6 sm:pt-8 md:pt-10'>
-            <div className='flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4 sm:gap-6 md:gap-8'>
+        <div className='flex flex-col custom-Container gap-8 md:gap-12 pb-16 md:pb-25 pt-8 md:pt-10'>
+            <div className='flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 md:gap-8'>
                 <div className="w-full lg:max-w-[687px] text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px]">Discover Our Services & Experience the Difference</div>
                 <div className="w-full lg:max-w-[514px] lg:text-right text-neutral-600 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">Explore our services and see how we make your disc golf experience easier and more secure.</div>
             </div>
-            <div className='flex flex-col lg:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8'>
+            <div className='flex flex-col sm:flex-col lg:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8'>
 
-                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[504px] px-2 sm:px-3 md:px-4 py-4 sm:py-6 md:py-8 group cursor-pointer overflow-hidden">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[504px] px-3 md:px-4 py-4 sm:py-6 md:py-8 group cursor-pointer overflow-hidden">
                     {/* Background Image */}
                     <div className="absolute inset-0 bg-[url('/ourService/service-card-1.png')] bg-cover bg-center z-0" />
 
@@ -33,9 +33,9 @@ const OurService = () => {
                         </div>
 
                         {/* Initially Hidden, Reveales on Hover */}
-                        <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full md:w-80 flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
+                        <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full sm:w-72 md:w-80 flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
                             <div className="self-stretch flex flex-col justify-start items-end gap-1.5 sm:gap-2 md:gap-3">
-                                <div className="self-stretch text-white text-xl sm:text-2xl md:text-3xl font-semibold font-['Poppins'] leading-tight md:leading-10">Process Optimization</div>
+                                <div className="self-stretch text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold font-['Poppins'] leading-tight md:leading-10">Process Optimization</div>
                                 <div className="self-stretch text-gray-200 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
                                     Build high-performing teams with optimized structures, clear processes.
                                 </div>
@@ -43,13 +43,13 @@ const OurService = () => {
                             <div className="hover:border-b border-blue-600 w-fit flex justify-start items-center gap-1">
                                 <a href='' className="flex gap-1 text-blue-600 text-sm sm:text-base md:text-lg font-semibold font-['Open_Sans'] leading-relaxed">
                                     <span>Read More</span>
-                                    <ArrowUpRight />
+                                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[504px] px-2 sm:px-3 md:px-4 py-4 sm:py-6 md:py-8 group cursor-pointer overflow-hidden">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[504px] px-3 md:px-4 py-4 sm:py-6 md:py-8 group cursor-pointer overflow-hidden">
                     {/* Background Image */}
                     <div className="absolute inset-0 bg-[url('/ourService/service-card-2.png')] bg-cover bg-top z-0" />
 
@@ -72,9 +72,9 @@ const OurService = () => {
                         </div>
 
                         {/* Initially Hidden, Reveales on Hover */}
-                        <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full md:w-80 flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
+                        <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full sm:w-72 md:w-80 flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
                             <div className="self-stretch flex flex-col justify-start items-end gap-1.5 sm:gap-2 md:gap-3">
-                                <div className="self-stretch text-white text-xl sm:text-2xl md:text-3xl font-semibold font-['Poppins'] leading-tight md:leading-10">Team Development</div>
+                                <div className="self-stretch text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold font-['Poppins'] leading-tight md:leading-10">Team Development</div>
                                 <div className="self-stretch text-gray-200 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
                                     Build high-performing teams with optimized structures, clear processes.
                                 </div>
@@ -82,13 +82,13 @@ const OurService = () => {
                             <div className="hover:border-b border-blue-600 w-fit flex justify-start items-center gap-1">
                                 <a href='' className="flex gap-1 text-blue-600 text-sm sm:text-base md:text-lg font-semibold font-['Open_Sans'] leading-relaxed">
                                     <span>Read More</span>
-                                    <ArrowUpRight />
+                                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[504px] px-2 sm:px-3 md:px-4 py-4 sm:py-6 md:py-8 group cursor-pointer overflow-hidden">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[504px] px-3 md:px-4 py-4 sm:py-6 md:py-8 group cursor-pointer overflow-hidden">
                     {/* Background Image */}
                     <div className="absolute  inset-0 bg-[url('/ourService/service-card-3.png')] bg-cover bg-top z-0" />
 
@@ -111,9 +111,9 @@ const OurService = () => {
                         </div>
 
                         {/* Initially Hidden, Reveales on Hover */}
-                        <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full md:w-80 flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
+                        <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full sm:w-72 md:w-80 flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
                             <div className="self-stretch flex flex-col justify-start items-end gap-1.5 sm:gap-2 md:gap-3">
-                                <div className="self-stretch text-white text-xl sm:text-2xl md:text-3xl font-semibold font-['Poppins'] leading-tight md:leading-10">Strategic Consulting</div>
+                                <div className="self-stretch text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold font-['Poppins'] leading-tight md:leading-10">Strategic Consulting</div>
                                 <div className="self-stretch text-gray-200 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
                                     Build high-performing teams with optimized structures, clear processes.
                                 </div>
@@ -121,7 +121,7 @@ const OurService = () => {
                             <div className="hover:border-b border-blue-600 w-fit flex justify-start items-center gap-1">
                                 <a href='' className="flex gap-1 text-blue-600 text-sm sm:text-base md:text-lg font-semibold font-['Open_Sans'] leading-relaxed">
                                     <span>Read More</span>
-                                    <ArrowUpRight />
+                                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
                             </div>
                         </div>
