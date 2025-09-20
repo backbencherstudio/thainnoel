@@ -7,7 +7,7 @@ const ComprehensiveSolution = () => {
     return (
         <div className='flex flex-col gap-6 sm:gap-8 md:gap-12 custom-Container py-12 sm:py-16 md:py-20 lg:py-25'>
             <div className='flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4 sm:gap-6 md:gap-8'>
-                <div className="w-full lg:max-w-[687px] justify-start text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-Inter leading-tight md:leading-[57.60px]">Comprehensive Solutions for Every Role in Your Business</div>
+                <div className="w-full lg:max-w-[687px] justify-start text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-Inter leading-tight md:leading-[57.60px]">Comprehensive Solutions for Every Role in Your Business</div>
                 <div className="w-full lg:max-w-[514px] lg:text-right text-neutral-600 text-sm sm:text-base md:text-lg font-normal font-Inter leading-relaxed md:leading-loose">We provide role-specific solutions to streamline operations, enhance collaboration, and boost overall efficiency.</div>
             </div>
             <div className='bg-[#F6F8FA] overflow-hidden p-3 sm:p-4 md:p-5 lg:p-10 flex flex-col lg:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8'>
@@ -43,13 +43,13 @@ const ComprehensiveSolution = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-fit flex gap-1.5 hover:text-[#2970FF] cursor-pointer'>
+                            <a href="/servicedetailss" className='w-fit flex gap-1.5 hover:text-[#2970FF] cursor-pointer'>
                                 <span className="justify-start text-Primary-button text-sm sm:text-base md:text-lg font-semibold font-Open_Sans leading-relaxed">Read More</span>
                                 <svg width="20" height="21" className="md:w-6 md:h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.5 8L6 18.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                     <path d="M8 6.68791C8 6.68791 16.0479 6.00949 17.2692 7.23079C18.4906 8.45209 17.812 16.5 17.812 16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                            </div>
+                            </a>
                         </div>
                     </TabsContent>
                     <TabsContent value="operations">
@@ -78,13 +78,13 @@ const ComprehensiveSolution = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-fit flex gap-1.5 hover:text-[#2970FF] cursor-pointer'>
+                            <a href="/servicedetailss" className='w-fit flex gap-1.5 hover:text-[#2970FF] cursor-pointer'>
                                 <span className="justify-start text-Primary-button text-sm sm:text-base md:text-lg font-semibold font-Open_Sans leading-relaxed">Read More</span>
                                 <svg width="20" height="21" className="md:w-6 md:h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.5 8L6 18.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                     <path d="M8 6.68791C8 6.68791 16.0479 6.00949 17.2692 7.23079C18.4906 8.45209 17.812 16.5 17.812 16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                            </div>
+                            </a>
                         </div>
                     </TabsContent>
                     <TabsContent value="teams">
@@ -113,17 +113,17 @@ const ComprehensiveSolution = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-fit flex gap-1.5 hover:text-[#2970FF] cursor-pointer'>
+                            <a href="/servicedetailss" className='w-fit flex gap-1.5 hover:text-[#2970FF] cursor-pointer'>
                                 <span className="justify-start text-Primary-button text-sm sm:text-base md:text-lg font-semibold font-Open_Sans leading-relaxed">Read More</span>
                                 <svg width="20" height="21" className="md:w-6 md:h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.5 8L6 18.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                     <path d="M8 6.68791C8 6.68791 16.0479 6.00949 17.2692 7.23079C18.4906 8.45209 17.812 16.5 17.812 16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                            </div>
+                            </a>
                         </div>
                     </TabsContent>
                 </Tabs>
-                <Image src={'/ComprehensiveSolution.png'} width={2000} height={2000} alt={''} className='w-full max-w-[574px] mt-4 sm:mt-6 lg:mt-0' />
+                <Image src={'/ComprehensiveSolution.png'} width={2000} height={2000} alt={''} className='w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[574px] mt-4 sm:mt-6 lg:mt-0' />
             </div>
         </div>
     )

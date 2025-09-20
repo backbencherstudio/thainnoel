@@ -34,27 +34,27 @@ export const ProblemSolution = (): React.JSX.Element => {
 
   return (
     <section className="w-full">
-      <div className="max-w-[1320px] mx-auto py-24">
-        <div className="flex flex-col gap-24">
+      <div className="max-w-[1320px] mx-auto py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8">
+        <div className="flex flex-col gap-12 sm:gap-16 md:gap-20 lg:gap-24">
           {sections.map((section: SectionData, index: number) => (
-            <div key={index} className="flex justify-between items-center gap-8">
+            <div key={index} className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8">
               {/* Content Leftt */}
               {section.imagePosition === "left" && (
                 <>
                   <img
-                    className="w-[592px] h-[759px] object-cover flex-shrink-0"
+                    className="w-full max-w-[592px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[759px] object-cover flex-shrink-0"
                     alt={section.title}
                     src={section.image}
                   />
-                  <div className="w-[644px] flex flex-col justify-start items-start gap-10">
+                  <div className="w-full max-w-[644px] flex flex-col justify-start items-start gap-6 sm:gap-8 md:gap-10">
                     <div className="flex flex-col justify-start items-start gap-4">
-                      <h2 className="text-black text-5xl font-bold font-['Inter'] leading-[57.60px]">
+                      <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px]">
                         {section.title}
                       </h2>
                       {section.content.map((paragraph: string, paragraphIndex: number) => (
                         <p
                           key={paragraphIndex}
-                          className="text-neutral-600 text-lg font-normal font-['Inter'] leading-loose"
+                          className="text-neutral-600 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose"
                         >
                           {paragraph}
                         </p>
@@ -81,15 +81,15 @@ export const ProblemSolution = (): React.JSX.Element => {
               {/* Content Right */}
               {section.imagePosition === "right" && (
                 <>
-                  <div className="w-[644px] flex flex-col justify-start items-start gap-10">
+                  <div className="w-full max-w-[644px] flex flex-col justify-start items-start gap-6 sm:gap-8 md:gap-10">
                     <div className="flex flex-col justify-start items-start gap-4">
-                      <h2 className="text-black text-5xl font-bold font-['Inter'] leading-[57.60px]">
+                      <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px]">
                         {section.title}
                       </h2>
                       {section.content.map((paragraph: string, paragraphIndex: number) => (
                         <p
                           key={paragraphIndex}
-                          className="text-neutral-600 text-lg font-normal font-['Inter'] leading-loose"
+                          className="text-neutral-600 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose"
                         >
                           {paragraph}
                         </p>
@@ -97,7 +97,7 @@ export const ProblemSolution = (): React.JSX.Element => {
                     </div>
                   </div>
                   <img
-                    className="w-[592px] h-[515px] object-cover flex-shrink-0"
+                    className="w-full max-w-[592px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[515px] object-cover flex-shrink-0"
                     alt={section.title}
                     src={section.image}
                   />

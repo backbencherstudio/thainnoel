@@ -16,24 +16,24 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <div
-      className={`w-full p-4 bg-indigo-50 border border-blue-500 flex items-start gap-3 ${
-        isFixedHeight ? "h-32" : "h-auto"
+      className={`w-full p-3 sm:p-4 bg-indigo-50 border border-blue-500 flex items-start gap-2 sm:gap-3 ${
+        isFixedHeight ? "h-24 sm:h-28 md:h-32" : "h-auto"
       }`}
     >
-      <div className="w-12 h-12 p-2.5 bg-white rounded-sm flex justify-center items-center">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 p-2 sm:p-2.5 bg-white rounded-sm flex justify-center items-center flex-shrink-0">
         <Image
           src={icon}
           alt={title}
           width={32}
           height={32}
-          className="w-8 h-8"
+          className="w-6 h-6 sm:w-8 sm:h-8"
         />
       </div>
-      <div className="flex-1 flex flex-col gap-2">
-        <h3 className="text-neutral-900 text-2xl font-semibold leading-loose">
+      <div className="flex-1 flex flex-col gap-1 sm:gap-2">
+        <h3 className="text-neutral-900 text-lg sm:text-xl md:text-2xl font-semibold leading-tight md:leading-loose">
           {title}
         </h3>
-        <p className="text-neutral-600 text-base font-normal leading-relaxed">
+        <p className="text-neutral-600 text-sm sm:text-base font-normal leading-relaxed">
           {description}
         </p>
       </div>
@@ -79,22 +79,22 @@ export const WhyChoseUs = (): React.JSX.Element => {
   return (
 
     <>
-    <div className="w-full ">
-                <div className="w-[1320px] mx-auto py-24 flex justify-between items-start">
+    <div className="w-full">
+                <div className="max-w-[1320px] mx-auto py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 flex flex-col lg:flex-row justify-between items-start gap-6 sm:gap-8">
       {/* Left Column */}
-      <div className="w-[676px] flex flex-col items-start gap-5">
-        <div className="flex flex-col items-start gap-4">
-          <h2 className="text-black text-5xl font-bold leading-[57.60px]">
+      <div className="w-full lg:w-[676px] flex flex-col items-start gap-4 sm:gap-5">
+        <div className="flex flex-col items-start gap-3 sm:gap-4">
+          <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-[57.60px]">
             Why Choose Our Process Flow Sprint?
           </h2>
-          <p className="w-[678px] text-neutral-600 text-lg font-normal leading-loose">
+          <p className="w-full text-neutral-600 text-sm sm:text-base md:text-lg font-normal leading-relaxed md:leading-loose">
             Many businesses attempt process improvements internally but stall
             when changes disrupt daily operations. Our sprint method ensures
             your team keeps working while improvements happen in the background
             — so you see benefits fast without slowing down.
           </p>
         </div>
-        <div className="w-full h-[454px] bg-black/20">
+        <div className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[454px] bg-black/20">
           <Image
             src="/services/flow.png"
             alt="Process Flow Sprint"
@@ -106,7 +106,7 @@ export const WhyChoseUs = (): React.JSX.Element => {
       </div>
 
       {/* Right Column */}
-      <div className="w-[569px] flex flex-col items-start gap-4">
+      <div className="w-full lg:w-[569px] flex flex-col items-start gap-3 sm:gap-4">
         {features.map((feature, index) => (
           <FeatureCard
             key={index}

@@ -12,21 +12,21 @@ interface FaqItemProps {
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle }) => {
   return (
     <div 
-      className={`self-stretch p-5 flex flex-col justify-start items-start gap-4 cursor-pointer transition-colors ${
+      className={`self-stretch p-3 sm:p-4 md:p-5 flex flex-col justify-start items-start gap-3 sm:gap-4 cursor-pointer transition-colors ${
         isOpen 
-          ? "bg-indigo-50 outline outline-1 outline-offset-[-1px] outline-blue-600" 
-          : "bg-white outline outline-1 outline-offset-[-1px] outline-indigo-50"
+          ? "bg-indigo-50 outline-1 outline-blue-600" 
+          : "bg-white outline-1 outline-indigo-50"
       }`}
       onClick={onToggle}
     >
-      <div className="self-stretch inline-flex justify-between items-center">
-        <div className={`justify-start text-lg font-semibold font-['Inter'] leading-loose ${
+      <div className="self-stretch flex justify-between items-center">
+        <div className={`justify-start text-sm sm:text-base md:text-lg font-semibold font-['Inter'] leading-relaxed md:leading-loose ${
           isOpen ? "text-black" : "text-neutral-800"
         }`}>
           {question}
         </div>
         <ChevronDown 
-          className={`w-6 h-6 transition-transform duration-200 ${
+          className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200 ${
             isOpen 
               ? "rotate-180 text-blue-600" 
               : "text-neutral-800"
@@ -34,7 +34,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle })
         />
       </div>
       {isOpen && (
-        <div className="self-stretch justify-start text-neutral-600 text-base font-medium font-['Inter'] leading-relaxed">
+        <div className="self-stretch justify-start text-neutral-600 text-sm sm:text-base font-medium font-['Inter'] leading-relaxed">
           {answer}
         </div>
       )}
@@ -66,19 +66,19 @@ export const Faq = (): React.JSX.Element => {
 
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[1600px] w-full mx-auto py-24">
-        <div className="w-full px-36 inline-flex justify-center items-center gap-12 overflow-hidden">
-          <div className="flex-1 inline-flex flex-col justify-start items-center gap-12">
-            <div className="self-stretch flex flex-col justify-center items-center gap-4">
-              <div className="self-stretch justify-start text-black text-5xl font-bold font-['Inter'] leading-[57.60px]">
+      <div className="max-w-[1600px] w-full mx-auto py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-36">
+        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8 sm:gap-10 md:gap-12 overflow-hidden">
+          <div className="flex-1 flex flex-col justify-start items-center gap-8 sm:gap-10 md:gap-12">
+            <div className="self-stretch flex flex-col justify-center items-center gap-3 sm:gap-4">
+              <div className="self-stretch justify-start text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px] text-center">
                 Frequently Asked Questions
               </div>
-              <div className="self-stretch justify-start text-neutral-600 text-lg font-normal font-['Inter'] leading-loose">
+              <div className="self-stretch justify-start text-neutral-600 text-sm sm:text-base md:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose text-center">
                 Find answers to common inquiries about my services, process, and how to get started on your project.
               </div>
             </div>
           </div>
-          <div className="flex-1 inline-flex flex-col justify-start items-start gap-6">
+          <div className="flex-1 flex flex-col justify-start items-start gap-4 sm:gap-6 w-full">
             {faqData.map((faq, index) => (
               <FaqItem
                 key={index}

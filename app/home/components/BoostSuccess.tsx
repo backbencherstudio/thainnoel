@@ -10,17 +10,11 @@ const BoostSuccess = () => {
             backgroundImage="/backgrounds/boost-success-bg.png"
             primaryButton={{
                 text: "Start Your Transformation",
-                onClick: () => {
-                    // Add your primary button logic here
-                    console.log("Start Your Transformation clicked");
-                }
+                href: "/servicedetailss"
             }}
             secondaryButton={{
                 text: "Learn More",
-                onClick: () => {
-                    // Add your secondary button logic here
-                    console.log("Learn More clicked");
-                }
+                href: "/servicedetailss"
             }}
         />
     );

@@ -15,8 +15,8 @@ const StepCard: React.FC<StepCardProps> = ({
 }) => {
   if (isTitleCard) {
     return (
-      <div className="w-96 h-auto flex items-center justify-start">
-        <h2 className="text-black text-5xl font-bold leading-[57.60px] text-left">
+      <div className="w-full max-w-[384px] h-auto flex items-center justify-start">
+        <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-[57.60px] text-left">
           How It<br />Works
         </h2>
       </div>
@@ -24,17 +24,17 @@ const StepCard: React.FC<StepCardProps> = ({
   }
 
   return (
-    <div className="w-96 h-auto p-8 bg-white flex flex-col gap-6">
-      <div className="border-b border-indigo-50 flex flex-col justify-center items-start gap-2.5 pb-2.5">
-        <div className="opacity-20 text-zinc-400 text-8xl font-semibold leading-[134.40px]">
+    <div className="w-full max-w-[384px] h-auto p-4 sm:p-6 md:p-8 bg-white flex flex-col gap-4 sm:gap-6">
+      <div className="border-b border-indigo-50 flex flex-col justify-center items-start gap-2 sm:gap-2.5 pb-2 sm:pb-2.5">
+        <div className="opacity-20 text-zinc-400 text-4xl sm:text-6xl md:text-8xl font-semibold leading-tight sm:leading-[134.40px]">
           {number}
         </div>
       </div>
-      <div className="flex flex-col gap-4 flex-1">
-        <h3 className="text-neutral-900 text-2xl font-semibold leading-loose">
+      <div className="flex flex-col gap-3 sm:gap-4 flex-1">
+        <h3 className="text-neutral-900 text-lg sm:text-xl md:text-2xl font-semibold leading-tight md:leading-loose">
           {title}
         </h3>
-        <p className="text-neutral-600 text-base font-normal leading-relaxed">
+        <p className="text-neutral-600 text-sm sm:text-base font-normal leading-relaxed">
           {description}
         </p>
       </div>
@@ -79,8 +79,8 @@ export const HowItWorks = (): React.JSX.Element => {
 
   return (
     <div className="w-full bg-violet-50">
-      <div className="max-w-[1320px] w-full mx-auto py-24">
-        <div className="flex flex-wrap gap-8 items-stretch justify-center">
+      <div className="max-w-[1320px] w-full mx-auto py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8">
+        <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 items-stretch justify-center">
           {steps.map((step, index) => (
             <StepCard
               key={index}
