@@ -41,7 +41,7 @@ const UserProfileSection = (): React.ReactElement => {
               </p>
 
               <div className="bg-gradient-to-br from-sky-950 to-blue-600 bg-clip-text text-transparent font-['Lavishly_Yours'] text-lg leading-loose">
-                <Image src="/about/Jordan.svg" alt="Jordan Blake" width={100} height={100} />
+                <Image src="/about/Jordan.svg" alt="Jordan Blake" width={100} height={100} className="object-cover" />
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ const FooterSection = (): React.ReactElement => {
                 {processSteps.map((step, index) => (
                   <div key={index} className="flex items-center gap-3 w-full">
                     <Image
-                      className="w-8 h-8"
+                      className="w-8 h-8 object-cover"
                       alt="Process step icon"
                       src={step.icon}
                       width={32}

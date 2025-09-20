@@ -51,7 +51,7 @@ const WhatClientSay = () => {
                                 <div className="self-stretch flex-1 justify-start text-black text-2xl font-semibold font-['Inter'] leading-loose">{review.review}</div>
                                 <div className="w-full flex justify-start items-center gap-4">
                                     <div className="w-12 h-12 relative">
-                                        <Image className="w-12 h-12 rounded-[999px]" src={review.profileImage} alt={review.profileImage} width={200} height={200} />
+                                        <Image className="w-12 h-12 rounded-[999px] object-cover" src={review.profileImage} alt={review.profileImage} width={200} height={200} />
                                     </div>
                                     <div className="flex flex-col justify-center items-start">
                                         <div className="text-center justify-start text-black text-base font-semibold font-['Inter'] leading-7">{review.profileName}</div>
