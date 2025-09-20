@@ -12,7 +12,7 @@ const TransformBusiness = () => {
     });
 
     return (
-        <div className='flex flex-col custom-Container gap-12 pb-25 pt-10'>
+        <div className='flex flex-col custom-Container gap-12 py-24'>
             <div className='flex flex-col lg:flex-row  justify-between items-start lg:items-end gap-8'>
                 <div className="w-full max-w-[562px] text-black text-5xl font-bold font-['Inter'] leading-[57.60px]">Ready to Transform Your Business?</div>
                 <div className="w-full lg:max-w-96 lg:text-right text-neutral-600 text-lg font-normal font-['Inter'] leading-loose">Get a free consultation and discover Wow we can optimize your operations</div>

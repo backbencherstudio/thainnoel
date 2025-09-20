@@ -8,7 +8,7 @@ interface SectionData {
   hasResultBox?: boolean;
 }
 
-export const HowItWorksSection = (): React.JSX.Element => {
+export const ProblemSolution = (): React.JSX.Element => {
   const sections: SectionData[] = [
     {
       title: "The Problem",
@@ -34,7 +34,7 @@ export const HowItWorksSection = (): React.JSX.Element => {
 
   return (
     <section className="w-full">
-      <div className="max-w-[1320px] mx-auto px-9 py-24">
+      <div className="max-w-[1320px] mx-auto py-24">
         <div className="flex flex-col gap-24">
           {sections.map((section: SectionData, index: number) => (
             <div key={index} className="flex justify-between items-center gap-8">

@@ -1,20 +1,20 @@
 import React from 'react'
 import ServiceBoost from './components/detailboost'
-import { HowItWorksSection } from './components/HowItWorksSection'
+import { ProblemSolution } from './components/ProblemSolution'
 import WhatsIncluded from './components/whatsIncluded'
-import { SolutionSection } from './components/SolutionSection'
+import { WhyChoseUs } from './components/WhyChoseUs'
+import { HowItWorks } from './components/HowItWorks'
+import TransformBusiness from '../components/common/TransformBusiness'
 
 export default function ServiceDetailsPage() {
   return (
     <div>
-
-
-
-
-        <ServiceBoost />
-        <HowItWorksSection />
+        <ProblemSolution />
         <WhatsIncluded />
-        <SolutionSection />
+        <ServiceBoost />
+        <WhyChoseUs />
+        <HowItWorks />
+        <TransformBusiness />
     </div>
   )
 }
