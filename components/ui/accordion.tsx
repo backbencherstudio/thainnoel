@@ -2,10 +2,12 @@ import React from 'react'
 
 interface AccordionProps {
   children: React.ReactNode
+  className?: string
 }
 
 interface AccordionItemProps {
   children: React.ReactNode
+  className?: string
 }
 
 interface AccordionTriggerProps {
@@ -18,12 +20,12 @@ interface AccordionContentProps {
   className?: string
 }
 
-export function Accordion({ children }: AccordionProps) {
-  return <div className="space-y-2">{children}</div>
+export function Accordion({ children, className = "" }: AccordionProps) {
+  return <div className={`space-y-2 ${className}`}>{children}</div>
 }
 
-export function AccordionItem({ children }: AccordionItemProps) {
-  return <div className="border border-gray-200 rounded-lg">{children}</div>
+export function AccordionItem({ children, className = "" }: AccordionItemProps) {
+  return <div className={`border border-gray-200 rounded-lg ${className}`}>{children}</div>
 }
 
 export function AccordionTrigger({ children, className = "" }: AccordionTriggerProps) {

@@ -5,6 +5,7 @@ import WhatsIncluded from './components/whatsIncluded'
 import { WhyChoseUs } from './components/WhyChoseUs'
 import { HowItWorks } from './components/HowItWorks'
 import TransformBusiness from '../components/common/TransformBusiness'
+import { Faq } from './components/Faq'
 
 export default function ServiceDetailsPage() {
   return (
@@ -13,6 +14,7 @@ export default function ServiceDetailsPage() {
         <WhatsIncluded />
         <ServiceBoost />
         <WhyChoseUs />
+        <Faq />
         <HowItWorks />
         <TransformBusiness />
     </div>
