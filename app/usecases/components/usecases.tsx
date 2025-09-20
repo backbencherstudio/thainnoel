@@ -127,7 +127,7 @@ export default function UseCases() {
             {/* Right Content Area */}
             <div className="flex flex-col w-full lg:w-[869px] items-start gap-8 md:gap-12">
               
-              {/* Hero Image */}
+              {/* Hero Imagee */}
               <div className="w-full h-[300px] md:h-[350px] lg:h-[414px] relative">
                 <Image
                   src="/usecase/case1.png"
