@@ -242,8 +242,6 @@
   }
 }
 
-
-
 /* slide custom  */
 
 @keyframes zoom-slow {
@@ -260,4 +258,13 @@
 
 .animate-zoom-slow {
   animation: zoom-slow 10s infinite ease-in-out;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
