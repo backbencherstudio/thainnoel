@@ -59,7 +59,7 @@ const DynamicNavigation: React.FC<DynamicNavigationProps> = ({
 
             {/* Main Hero Section */}
             <section 
-                className="w-full mx-auto h-[600px] relative bg-black/50 overflow-hidden"
+                className="w-full mx-auto h-[400px] sm:h-[500px] lg:h-[600px] relative bg-black/50 overflow-hidden"
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
                     backgroundSize: "cover",
@@ -69,12 +69,12 @@ const DynamicNavigation: React.FC<DynamicNavigationProps> = ({
                 }}
             >
                 {/* Main Content */}
-                <div className="w-full mx-auto top-[209px] absolute inline-flex flex-col justify-center items-center gap-8 z-10">
-                    <div className="flex flex-col justify-center items-center gap-4">
-                        <div className={`w-[766px] text-center justify-start text-white text-6xl font-bold font-['Inter'] leading-[76.80px] ${titleClassName}`}>
+                <div className="w-full mx-auto top-[100px] sm:top-[150px] lg:top-[209px] absolute inline-flex flex-col justify-center items-center gap-4 sm:gap-6 lg:gap-8 z-10 px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col justify-center items-center gap-2 sm:gap-3 lg:gap-4">
+                        <div className={`w-full max-w-[766px] text-center justify-start text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-['Inter'] leading-tight sm:leading-[1.2] lg:leading-[76.80px] ${titleClassName}`}>
                             {title}
                         </div>
-                        <div className={`w-[751px] text-center justify-start text-white text-2xl font-normal font-['Inter'] leading-9 ${descriptionClassName}`}>
+                        <div className={`w-full max-w-[751px] text-center justify-start text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal font-['Inter'] leading-relaxed sm:leading-7 lg:leading-9 ${descriptionClassName}`}>
                             {description}
                         </div>
                     </div>
