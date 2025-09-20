@@ -16,8 +16,8 @@ export default function ServiceDetailsPage() {
         <ServiceBoost />
         <WhyChoseUs />
         <Faq />
-        <Pricing />
         <HowItWorks />
+        <Pricing />
         <TransformBusiness />
     </div>
   )
