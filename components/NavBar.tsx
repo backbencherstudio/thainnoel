@@ -54,7 +54,7 @@ const NavBar = ({
         { label: "Use Cases", href: "/usecases" },
         { label: "Our Services", href: "/services" },
         { label: "Contact Us", href: "/contact" },
-        { label: "Our Blogs", href: "/blogs" },
+        // { label: "Our Blogs", href: "/blogs" },
         { label: "About Us", href: "/about" },
     ];
 
