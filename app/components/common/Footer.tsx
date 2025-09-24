@@ -39,7 +39,7 @@ const Footer = () => {
               <Link href="/about" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">About Us</Link>
               <Link href="/usecases" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Use Cases</Link>
               <Link href="/services" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Our Services</Link>
-              <Link href="/blogs" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Our Blogs</Link>
+              {/* <Link href="/blogs" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Our Blogs</Link> */}
               <Link href="/contact" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Contact Us</Link>
             </div>
           </div>
