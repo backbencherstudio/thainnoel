@@ -53,7 +53,7 @@ const Footer = () => {
               <Link href="/cookies" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Cookies</Link>
             </div>
           </div>
-          {/* contact us  */}
+          {/* contact us == */}
           <div className='flex flex-col gap-4 w-fit'>
             <div className='flex flex-col gap-5'>
               <div className="self-stretch justify-start text-white text-lg font-bold font-['Inter'] leading-loose">Contact Us</div>
