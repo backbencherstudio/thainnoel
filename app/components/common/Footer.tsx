@@ -19,12 +19,12 @@ const Footer = () => {
         <div className='flex flex-wrap flex-row justify-between gap-10 pb-8'>
           <div className='flex flex-col gap-6 w-fit'>
             <div className='flex flex-col gap-2'>
-              <Image src={'/logos/PageBrandLogo.svg'} alt={''} height={200} width={200} className=' w-[500px] h-auto ' />
+              <Image src={'/logos/PageBrandLogo.svg'} alt={''} height={200} width={200} className=' w-[500px] h-auto md:-mt-10 ' />
               <div className="w-full max-w-[457px] justify-start text-white text-lg font-normal font-['Inter'] leading-loose">We help companies streamline processes, implement automation, and scale efficiently. From startups to enterprise, we deliver results that drive growth.</div>
             </div>
             <div className='flex flex-col gap-4'>
               <div className="self-stretch justify-start text-white text-2xl font-semibold font-['Poppins'] leading-9">Sign up for our newsletter</div>
-              <form onSubmit={disp} className="w-fit md:w-full outline-1 outline-offset-[-1px] outline-white inline-flex justify-between items-center">
+              <form onSubmit={disp} className="w-fit md:w-full outline-1 outline-offset-[-1px] outline-white inline-flex justify-between items-center md:mb-[60px]">
                 <input id='email' className="focus:outline-0 w-full pl-4 pr-3 py-3   text-gray-200 text-base font-normal font-['Inter'] leading-7" placeholder='Enter your email...'></input>
                 <button type='submit' className="p-2 cursor-pointer flex justify-center items-center gap-2.5">
                   <ArrowUpRight />
