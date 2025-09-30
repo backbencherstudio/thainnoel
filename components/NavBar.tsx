@@ -63,7 +63,7 @@ const NavBar = ({
             <div className=' flex items-center justify-between   text-white  custom-Container py-6 '>
                 {/* logo icon  */}
                 <div className='bg-transparent'>
-                    <Image src={logoImage} alt={''} height={200} width={200} className=' md:w-[400px] h-auto -translate-x-2' />
+                    <Image src={logoImage} alt={''} height={200} width={200} className=' w-[200px] md:w-[500px] h-auto -translate-x-2' />
                 </div>
                 {/* menu items  */}
                 <div className=" hidden md:flex gap-6 justify-center">
