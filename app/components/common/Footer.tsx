@@ -19,7 +19,7 @@ const Footer = () => {
         <div className='flex flex-wrap flex-row justify-between gap-10 pb-8'>
           <div className='flex flex-col gap-6 w-fit'>
             <div className='flex flex-col gap-2'>
-              <Image src={'/logos/PageBrandLogo.svg'} alt={''} height={200} width={200} className=' w-[500px] h-auto md:-mt-10 ' />
+              <Image src={'/logos/PageBrandLogo.svg'} alt={''} height={200} width={200} className=' w-[400px] sm:w-[400px] md:w-[400px] xl:w-[500px] 2xl:w-[500px] h-auto md:-mt-10 ' />
               <div className="w-full max-w-[457px] justify-start text-white text-lg font-normal font-['Inter'] leading-loose">We help companies streamline processes, implement automation, and scale efficiently. From startups to enterprise, we deliver results that drive growth.</div>
             </div>
             <div className='flex flex-col gap-4'>

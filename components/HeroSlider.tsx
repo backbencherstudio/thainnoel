@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 export default function HeroSlider() {
   const router = useRouter();
-  
+
   const slides = [
     {
       image: '/backgrounds/hero-bg.jpg',
@@ -36,7 +36,7 @@ export default function HeroSlider() {
 
   return (
     <div className="relative w-full max-w-[100vw] mx-auto overflow-hidden ">
-      <NavBar 
+      <NavBar
         contactEmail="info@thainnoel.com"
         contactPhone="(085) 834-9461"
         consultationButtonText="Book a Consultation"
@@ -63,11 +63,11 @@ export default function HeroSlider() {
               <div className="relative z-10 h-full max-w-4xl flex justify-center py-40 md:py-[218px] mx-auto">
                 <div className='flex flex-col items-center gap-8 '>
                   <div className='flex flex-col gap-4 '>
-                    <span className="  text-center justify-start text-white text-6xl font-bold font-Inter leading-[76.80px]">Optimize Your Business Operations & Growth</span>
+                    <span className="  text-center justify-start text-white text-4xl sm:text-5xl lg:text-6xl font-bold font-Inter leading-tight sm:leading-[76.80px]">Optimize Your Business Operations & Growth</span>
                     <span className="  text-center justify-start text-white text-2xl font-normal font-Inter leading-9">We help companies streamline processes, implement automation, and scale efficiently. From startups to enterprise, we deliver results that drive growth.</span>
                   </div>
                   <div className='flex flex-col md:flex-row items-center text-white gap-3'>
-                    <button 
+                    <button
                       className="border-1 border-[#2970FF] px-6 py-4 bg-[#2970FF] hover:bg-white text-white hover:text-[#2970FF] duration-300 cursor-pointer flex gap-2"
                       onClick={() => router.push('/contact')}
                     >
@@ -76,7 +76,7 @@ export default function HeroSlider() {
                         <path d="M3 13H18.5715M14.0001 18L19 13L14 8" stroke="currentColor" strokeWidth="1.5" />
                       </svg>
                     </button>
-                    <button 
+                    <button
                       className="border-1 border-[#2970FF]  px-6 py-4 hover:bg-white hover:text-[#2970FF] duration-300 cursor-pointer"
                       onClick={() => router.push('/about')}
                     >
