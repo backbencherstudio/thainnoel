@@ -20,7 +20,7 @@ const ConditionalHero: React.FC<ConditionalHeroProps> = ({
     const pathname = usePathname();
     const router = useRouter();
     
-    // Check if current page is home page
+    // Check if current page iis home page
     const isHomePage = pathname === '/';
     
     if (isHomePage) {
