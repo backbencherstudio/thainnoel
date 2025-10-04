@@ -19,7 +19,7 @@ interface NavigationItem {
     hasDropdown?: boolean;
 }
 
-const NavBar = ({ 
+const NavBar = ({
     logoImage = "/logos/PageBrandLogo.svg",
     contactEmail = "info@thainnoel.com",
     contactPhone = "(085) 834-9461",
@@ -30,11 +30,11 @@ const NavBar = ({
     const [isOpen, setisOpen] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
-    
+
     const change = () => {
         setisOpen(!isOpen)
     }
-    
+
     const handleNavigation = (path: string) => {
         router.push(path);
         setisOpen(false); // Close mobile menu after navigation
@@ -63,18 +63,22 @@ const NavBar = ({
             <div className=' flex items-center justify-between   text-white  custom-Container py-6 '>
                 {/* logo icon  */}
                 <div className='bg-transparent'>
-                    <Image src={logoImage} alt={''} height={200} width={200} className=' w-[200px] md:w-[500px] h-auto -translate-x-2' />
+                    <Image src={logoImage} alt={''} height={200} width={200} className=' w-[300px] sm:w-[300px] md:w-[400px] xl:w-[500px] 2xl:w-[500px] h-auto -translate-x-2' />
+                    {/* <h1 className="text-4xl font-bold uppercase">
+                        Optivo.<span className="text-Primary-button">solutions</span>
+                    </h1> */}
+
+
                 </div>
                 {/* menu items  */}
-                <div className=" hidden md:flex gap-6 justify-center">
+                <div className=" hidden lg:flex gap-6 justify-center">
                     {navigationItems.map((item, index) => (
                         <div
                             key={index}
-                            className={`${
-                                pathname === item.href
+                            className={`${pathname === item.href
                                     ? "py-2.5 border-b-[1.50px] border-Primary-button flex justify-center items-center gap-2.5"
                                     : "py-2.5 flex justify-center items-center gap-2.5"
-                            } cursor-pointer`}
+                                } cursor-pointer`}
                             onClick={() => handleNavigation(item.href)}
                         >
                             <div className="justify-start text-white text-lg font-normal font-['Inter'] leading-loose">
@@ -88,35 +92,34 @@ const NavBar = ({
                         </div>
                     ))}
                 </div>
-                <button 
-                    className="hidden md:block border px-6 py-4 hover:bg-white hover:text-black duration-300 cursor-pointer"
+                <button
+                    className="hidden lg:block border px-6 py-4 hover:bg-white hover:text-black duration-300 cursor-pointer"
                     onClick={handleConsultationClick}
                 >
                     {consultationButtonText}
                 </button>
                 {/* Mobile menu button */}
-                 
-                <button onClick={change} className={`${isOpen ? 'hidden' : ' block'} md:hidden mr-1 cursor-pointer`}>
+
+                <button onClick={change} className={`${isOpen ? 'hidden' : ' block'} lg:hidden mr-1 cursor-pointer`}>
                     <TableOfContents />
                 </button>
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="absolute top-0 right-0 w-fit h-fit bg-black/70 flex flex-col justify-between items-center py-8 px-6 rounded-lg md:hidden z-50">
+                    <div className="absolute top-0 right-0 w-fit h-fit bg-black/70 flex flex-col justify-between items-center py-8 px-6 rounded-lg lg:hidden z-50">
                         <div className="w-full flex flex-col items-center gap-6 text-white">
                             {navigationItems.map((item, index) => (
-                                <button 
+                                <button
                                     key={index}
-                                    className={`hover:border-b-1 cursor-pointer ${
-                                        pathname === item.href ? 'border-b-1 border-Primary-button' : ''
-                                    }`}
+                                    className={`hover:border-b-1 cursor-pointer ${pathname === item.href ? 'border-b-1 border-Primary-button' : ''
+                                        }`}
                                     onClick={() => handleNavigation(item.href)}
                                 >
                                     {item.label}
                                 </button>
                             ))}
 
-                            <button 
+                            <button
                                 className="px-6 py-4 border border-white hover:bg-white hover:text-black transition duration-300 cursor-pointer"
                                 onClick={handleConsultationClick}
                             >
