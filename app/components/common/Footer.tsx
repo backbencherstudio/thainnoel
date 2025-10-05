@@ -60,7 +60,7 @@ const Footer = () => {
               <div className='flex flex-col gap-[5px]'>
                 <div className='flex flex-col gap-2'>
                   <div className="justify-start text-white text-lg font-medium font-['Inter'] leading-loose">Email:</div>
-                  <Link href="mailto:example@gmail.com" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">info@optivo.com</Link>
+                  <Link href="mailto:info@optivo.solutions" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">info@optivo.solutions</Link>
                 </div>
                 <div className='flex flex-col gap-2'>
                   <div className="justify-start text-white text-lg font-medium font-['Inter'] leading-loose">Phone:</div>

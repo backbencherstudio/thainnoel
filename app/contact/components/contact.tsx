@@ -83,7 +83,7 @@ export default function Contact() {
               Email
             </div>
             <div className="text-neutral-600 text-base sm:text-lg font-normal font-sans leading-7">
-              example@gmail.com
+            info@optivo.solutions
             </div>
           </div>
         </div>

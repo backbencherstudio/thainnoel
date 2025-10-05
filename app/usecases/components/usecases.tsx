@@ -14,7 +14,7 @@ const useCases = [
 
 const contactInfo = [
   { icon: PhoneIcon, text: "+85 555 8888 6666" },
-  { icon: MailIcon, text: "example@gmail.com" },
+  { icon: MailIcon, text: "info@optivo.solutions" },
   {
     icon: MapPinIcon,
     text: "4517 Washington Ave. Manchester,\nKentucky 39495",

@@ -11,7 +11,7 @@ const TopBar = () => {
                         <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.05957 10.2983C7.8127 11.5733 10.1882 11.5732 11.9414 10.2983L18 5.89111V12.6001C18 14.8092 16.2091 16.6001 14 16.6001H4C1.79086 16.6001 0 14.8092 0 12.6001V5.89014L6.05957 10.2983ZM14 0.399902C15.8977 0.399902 17.4851 1.72172 17.8955 3.49463L10.7646 8.68115C9.71292 9.44555 8.28798 9.4457 7.23633 8.68115L0.103516 3.49365C0.514135 1.7211 2.10259 0.399902 4 0.399902H14Z" fill="white" />
                         </svg>
-                        <span className=" text-neutral-50 text-lg font-medium font-Inter leading-relaxed">info@optivo.com</span>
+                        <span className=" text-neutral-50 text-lg font-medium font-Inter leading-relaxed">info@optivo.solutions</span>
                     </Link>
                     <Link href="tel:+858349461" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
