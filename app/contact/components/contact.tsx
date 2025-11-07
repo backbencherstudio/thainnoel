@@ -1,7 +1,55 @@
+'use client';
+
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { MessageService } from "@/service/message/message.service";
+import toast from 'react-hot-toast';
+
+type MessageFormValues = {
+  fullName: string;
+  email: string;
+  message: string;
+};
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<MessageFormValues>();
+
+  const onSubmit = async (data: MessageFormValues) => {
+    try {
+      setIsSubmitting(true);
+      const response = await MessageService.sendMessage(data);
+      if (response.success) {
+        toast.success("Message sent successfully!");
+        reset();
+      }
+    } catch (error: any) {
+      let errorMessage = "Failed to send message. Please try again.";
+      
+      if (error.message === 'Network Error' || error.code === 'ECONNABORTED') {
+        errorMessage = "Network error: Please check if the server is running at http://192.168.7.12:3000";
+      } else if (error?.response?.data?.message) {
+        errorMessage = error.response.data.message;
+      } else if (error?.response?.status) {
+        errorMessage = `Error ${error.response.status}: ${error.response.statusText || 'Server error'}`;
+      } else if (error?.message) {
+        errorMessage = error.message;
+      }
+      
+      toast.error(errorMessage);
+      console.error("Message send error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-36 py-12 sm:py-16 md:py-20 lg:py-24 bg-white flex flex-col justify-start items-start gap-8 sm:gap-10 md:gap-12">
       <div className="self-stretch flex flex-col justify-start items-start gap-8 sm:gap-10 md:gap-12">
@@ -19,7 +67,10 @@ export default function Contact() {
         {/* Main Content Section */}
         <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-8 sm:gap-10 md:gap-12">
           {/* Contact Form */}
-          <div className="w-full lg:w-[636px] p-6 sm:p-8 md:p-10 bg-indigo-50 rounded-lg border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8 md:gap-10">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full lg:w-[636px] p-6 sm:p-8 md:p-10 bg-indigo-50 rounded-lg border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8 md:gap-10"
+          >
             <div className="self-stretch flex flex-col justify-start items-start gap-3 sm:gap-4">
               <div className="text-slate-950 text-2xl sm:text-3xl font-black font-sans leading-tight sm:leading-tight md:leading-10">
                 Send us a Message
@@ -27,38 +78,78 @@ export default function Contact() {
             </div>
 
             {/* Form Fields */}
-            <div className="self-stretch flex justify-start items-center gap-4 sm:gap-6">
-              <div className="flex-1 pt-2.5 pb-4 sm:pb-6 border-b-[0.5px] border-zinc-400">
-                <div className="text-neutral-600 text-base sm:text-lg font-normal font-sans leading-relaxed sm:leading-7">
-                  Full Name
-                </div>
+            <div className="self-stretch flex flex-col gap-4">
+              <div className="flex-1">
+                <input
+                  {...register("fullName", { required: "Full name is required" })}
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full pt-2.5 pb-4 sm:pb-6 px-0 bg-transparent border-b-[0.5px] border-zinc-400 text-neutral-600 text-base sm:text-lg font-normal font-sans leading-relaxed sm:leading-7 focus:outline-none focus:border-blue-600"
+                />
+                {errors.fullName && (
+                  <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>
+                )}
               </div>
-            </div>
 
-            <div className="self-stretch flex justify-start items-center gap-4 sm:gap-6">
-              <div className="flex-1 pt-2.5 pb-4 sm:pb-6 border-b-[0.5px] border-zinc-400">
-                <div className="text-neutral-600 text-base sm:text-lg font-normal font-sans leading-relaxed sm:leading-7">
-                  Email
-                </div>
+              <div className="flex-1">
+                <input
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
+                  type="email"
+                  placeholder="Email"
+                  className="w-full pt-2.5 pb-4 sm:pb-6 px-0 bg-transparent border-b-[0.5px] border-zinc-400 text-neutral-600 text-base sm:text-lg font-normal font-sans leading-relaxed sm:leading-7 focus:outline-none focus:border-blue-600"
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                )}
               </div>
-            </div>
 
-            <div className="self-stretch pt-2.5 pb-12 sm:pb-16 border-b-[0.5px] border-zinc-400">
-              <div className="text-neutral-600 text-base sm:text-lg font-normal font-sans leading-relaxed sm:leading-7">
-                Message
+              <div className="flex-1">
+                <textarea
+                  {...register("message", { required: "Message is required" })}
+                  placeholder="Message"
+                  rows={4}
+                  className="w-full pt-2.5 pb-12 sm:pb-16 px-0 bg-transparent border-b-[0.5px] border-zinc-400 text-neutral-600 text-base sm:text-lg font-normal font-sans leading-relaxed sm:leading-7 focus:outline-none focus:border-blue-600 resize-none"
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                )}
               </div>
             </div>
 
             {/* Submit Button */}
-            <Button className="w-full sm:w-auto h-10 sm:h-12 px-4 bg-blue-600 hover:bg-blue-700 rounded-xl flex items-center gap-1">
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full sm:w-auto h-10 sm:h-12 px-4 bg-blue-600 hover:bg-blue-700 rounded-xl flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
               <div className="flex flex-row items-center justify-center gap-2">
-                <span className="text-neutral-50 text-sm sm:text-base font-medium font-sans leading-relaxed">
-                  Send Message
-                </span>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span className="text-neutral-50 text-sm sm:text-base font-medium font-sans leading-relaxed">
+                      Sending...
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-neutral-50 text-sm sm:text-base font-medium font-sans leading-relaxed">
+                      Send Message
+                    </span>
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  </>
+                )}
               </div>
             </Button>
-          </div>
+          </form>
 
           {/* Team Photo */}
           <div className="w-full lg:w-[636px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[570px]">

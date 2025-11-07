@@ -5,6 +5,7 @@ import TopBar from "./components/common/TopBar";
 import Footer from "./components/common/Footer";
 import ConditionalHero from "./components/common/ConditionalHero";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         />
         {children}
         <Footer />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

@@ -3,6 +3,9 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { ConsultationService } from '@/service/consultation/consultation.service';
+import toast from 'react-hot-toast';
 
 type FormValues = {
   firstName: string;
@@ -14,15 +17,65 @@ type FormValues = {
 };
 
 const ConsultationForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log('Form Data:', data);
-    // You can integrate email sending or backend API call here.
+  const onSubmit = async (data: FormValues) => {
+    try {
+      setIsSubmitting(true);
+      const datetime = new Date().toISOString();
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+      const consultationData = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        company: data.company,
+        email: data.email,
+        service: data.service,
+        message: data.message || '',
+        datetime,
+        timezone,
+      };
+
+      console.log('Sending consultation data:', consultationData);
+      const response = await ConsultationService.sendConsultation(consultationData);
+      console.log('Consultation response:', response);
+      
+      if (response.success) {
+        toast.success('Consultation request submitted successfully!');
+        reset();
+      }
+    } catch (error: any) {
+      console.error("Consultation submit error:", error);
+      console.error("Error details:", {
+        message: error?.message,
+        status: error?.response?.status,
+        data: error?.response?.data,
+        url: error?.config?.url,
+        baseURL: error?.config?.baseURL,
+      });
+      
+      let errorMessage = 'Failed to submit consultation. Please try again.';
+      
+      if (error.message === 'Network Error' || error.code === 'ECONNABORTED') {
+        errorMessage = 'Network error: Please check if the server is running at http://192.168.7.12:3000';
+      } else if (error?.response?.data?.message) {
+        errorMessage = error.response.data.message;
+      } else if (error?.response?.status) {
+        errorMessage = `Error ${error.response.status}: ${error.response.statusText || 'Server error'}`;
+      } else if (error?.message) {
+        errorMessage = error.message;
+      }
+      
+      toast.error(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,12 +172,25 @@ const ConsultationForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full flex gap-2 justify-center items-center  px-6 py-3 mt-4 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-lg rounded transition duration-300"
+        disabled={isSubmitting}
+        className="w-full flex gap-2 justify-center items-center px-6 py-3 mt-4 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-lg rounded transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        <span>Book a Consultation</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 13H18.5715M14.0001 18L19 13L14 8" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
+        {isSubmitting ? (
+          <>
+            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span>Submitting...</span>
+          </>
+        ) : (
+          <>
+            <span>Book a Consultation</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 13H18.5715M14.0001 18L19 13L14 8" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </>
+        )}
       </button>
     </form>
   );
