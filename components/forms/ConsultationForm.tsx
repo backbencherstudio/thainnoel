@@ -3,7 +3,7 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useState, type MutableRefObject } from 'react';
 import { ConsultationService } from '@/service/consultation/consultation.service';
 import toast from 'react-hot-toast';
 
@@ -16,7 +16,14 @@ type FormValues = {
   message: string;
 };
 
-const ConsultationForm = () => {
+type ConsultationFormProps = {
+  selectedDate?: Date;
+  selectedTimezone?: string;
+  selectedDateRef?: MutableRefObject<Date | undefined>;
+  selectedTimezoneRef?: MutableRefObject<string | undefined>;
+};
+
+const ConsultationForm = ({ selectedDate, selectedTimezone, selectedDateRef, selectedTimezoneRef }: ConsultationFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
@@ -28,8 +35,26 @@ const ConsultationForm = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       setIsSubmitting(true);
-      const datetime = new Date().toISOString();
-      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const dateValue = selectedDateRef?.current ?? selectedDate;
+      const timezoneValue = selectedTimezoneRef?.current ?? selectedTimezone;
+
+      let datetime: string;
+      if (dateValue) {
+        const year = dateValue.getFullYear();
+        const month = dateValue.getMonth();
+        const day = dateValue.getDate();
+        datetime = new Date(Date.UTC(year, month, day, 0, 0, 0)).toISOString();
+      } else {
+        datetime = new Date().toISOString();
+      }
+      const timezone = timezoneValue || Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+      console.debug('[Consultation] Submit payload baseline:', {
+        selectedDateOriginal: dateValue ? dateValue.toISOString() : null,
+        computedDatetimeUTC: datetime,
+        selectedTimezone: timezoneValue,
+        effectiveTimezone: timezone,
+      });
 
       const consultationData = {
         firstName: data.firstName,

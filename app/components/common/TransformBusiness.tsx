@@ -1,15 +1,51 @@
+
 'use client'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import TimezoneSelect from 'react-timezone-select'
 import ConsultationForm from '../../../components/forms/ConsultationForm'
 import { DateRangePicker } from '../../../components/reusable/DateRangePicker'
 
 
 const TransformBusiness = () => {
+    const defaultTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone
     const [selectedTimezone, setSelectedTimezone] = useState<any>({
-        value: Intl.DateTimeFormat().resolvedOptions().timeZone,
-        label: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    });
+        value: defaultTimezone,
+        label: defaultTimezone,
+    })
+
+    const initialDate = new Date()
+    initialDate.setHours(0, 0, 0, 0)
+
+    const [selectedDate, setSelectedDate] = useState<Date | undefined>(initialDate)
+    const selectedDateRef = useRef<Date | undefined>(initialDate)
+    const selectedTimezoneRef = useRef<string>(defaultTimezone)
+
+    const timezoneValue = typeof selectedTimezone === 'string'
+        ? selectedTimezone
+        : selectedTimezone?.value || selectedTimezone?.label || defaultTimezone
+
+    const handleDateSelect = (value: Date | undefined) => {
+        const normalized = value ? new Date(value) : undefined
+        if (normalized) {
+            normalized.setHours(0, 0, 0, 0)
+        }
+        selectedDateRef.current = normalized
+        setSelectedDate(normalized)
+        console.debug('[Consultation] Date selection changed:', {
+            selectedDate: normalized ? normalized.toISOString() : null,
+        })
+    }
+
+    const handleTimezoneChange = (value: any) => {
+        setSelectedTimezone(value)
+        const extracted = typeof value === 'string'
+            ? value
+            : value?.value || value?.label || defaultTimezone
+        selectedTimezoneRef.current = extracted
+        console.debug('[Consultation] Timezone selection changed:', {
+            selectedTimezone: extracted,
+        })
+    }
 
     return (
         <div className='flex flex-col custom-Container gap-8 sm:gap-10 md:gap-12 py-16 sm:py-20 md:py-24'>
@@ -20,14 +56,19 @@ const TransformBusiness = () => {
             <div className='flex flex-col  md:flex-row justify-between gap-6 sm:gap-8'>
                 <div className='h-auto sm:h-[800px] md:h-[939px] max-w-[720px] w-full items-start'>
                     {/* form **/}
-                    <ConsultationForm />
+                    <ConsultationForm
+                        selectedDate={selectedDateRef.current}
+                        selectedTimezone={selectedTimezoneRef.current}
+                        selectedDateRef={selectedDateRef}
+                        selectedTimezoneRef={selectedTimezoneRef}
+                    />
                 </div>
                 <div className='w-full max-w-[600px] flex flex-col gap-4 sm:gap-6 items-center'>
                     {/* callender */}
                     <div className=" lg:max-w-72 text-center  text-neutral-800 text-xl sm:text-2xl font-semibold font-roboto leading-tight md:leading-9">Let&apos;s Talk – Pick a Time That Works for You</div>
                     <div className='flex flex-col p-6 sm:p-8 md:p-10 w-full  gap-[25px] sm:gap-[33.85px] shadow-[0px_4px_25.899999618530273px_24px_rgba(109,109,109,0.03)] items-center'>
                         <div className="w-full text-zinc-900 text-2xl sm:text-3xl font-bold font-['Proxima_Nova'] leading-tight md:leading-10">Select a Date & Time</div>
-                        <DateRangePicker />
+                        <DateRangePicker date={selectedDate} onSelect={handleDateSelect} />
                         <div className='w-full flex gap-[18.7px] items-center'>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_4361_462)">
@@ -42,7 +83,7 @@ const TransformBusiness = () => {
 
                             <TimezoneSelect
                                 value={selectedTimezone}
-                                onChange={setSelectedTimezone}
+                                onChange={handleTimezoneChange}
                                 className='w-full'
                             />
                         </div>
