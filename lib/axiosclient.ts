@@ -1,10 +1,11 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from "axios";
+import { BASE_URL } from "./base_url";
 
 
 // *** axios instance ***
 
 const axiosClient: AxiosInstance = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "http://192.168.7.12:3000",
+    baseURL: BASE_URL,
     timeout: 30000, // 30 seconds timeout
     headers: {
         "Content-Type": "application/json",
