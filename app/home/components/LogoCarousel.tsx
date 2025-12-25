@@ -2,30 +2,7 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-const logos = [
-  '/logos/logo1.svg',
-  '/logos/logo2.svg',
-  '/logos/logo3.svg',
-  '/logos/logo4.svg',
-  '/logos/logo5.svg',
-  '/logos/logo6.svg',
-  '/logos/logo5.svg',
-  '/logos/logo4.svg',
-  '/logos/logo3.svg',
-  '/logos/logo2.svg',
-  '/logos/logo1.svg',
-  '/logos/logo2.svg',
-  '/logos/logo3.svg',
-  '/logos/logo4.svg',
-  '/logos/logo5.svg',
-  '/logos/logo6.svg',
-  '/logos/logo5.svg',
-  '/logos/logo4.svg',
-  '/logos/logo3.svg',
-  '/logos/logo2.svg',
-   
-
-];
+const logos = Array.from({ length: 20 }, (_, i) => `/logos/frame-${i + 1}.png`);
 
 const LogoCarousel = () => {
   return (
@@ -36,14 +13,14 @@ const LogoCarousel = () => {
           <Marquee speed={60} direction="left" gradient gradientWidth={50}>
             <div className="flex gap-6 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-14">
               {logos.map((logo, index) => (
-                <img key={index} src={logo} alt={`logo ${index}`} className="h-8 sm:h-6 md:h-8 lg:h-10 xl:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <Image key={index} src={logo} alt={`Technology partner ${index + 1}`} width={120} height={48} className="h-8 sm:h-6 md:h-8 lg:h-10 xl:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
               ))}
             </div>
           </Marquee>
           <Marquee speed={60} direction="right" gradient gradientWidth={50}>
             <div className="flex gap-6 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-14">
               {logos.map((logo, index) => (
-                <img key={index} src={logo} alt={`logo ${index}`} className="h-8 sm:h-6 md:h-8 lg:h-10 xl:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <Image key={index} src={logo} alt={`Technology partner ${index + 1}`} width={120} height={48} className="h-8 sm:h-6 md:h-8 lg:h-10 xl:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
               ))}
             </div>
           </Marquee>
