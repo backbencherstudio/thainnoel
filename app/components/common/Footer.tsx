@@ -49,8 +49,8 @@ const Footer = () => {
             <div className='flex flex-col gap-4'>
               <Link href="/privacy-policy" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms-of-service" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Terms of Services</Link>
-              <Link href="/conditions" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Conditions</Link>
-              <Link href="/cookies" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Cookies</Link>
+              <Link href="/conditions" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">DPA</Link>
+              <Link href="/cookies" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">Cookies Disclaimer</Link>
             </div>
           </div>
           {/* contact us*/}
