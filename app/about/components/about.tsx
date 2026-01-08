@@ -5,44 +5,72 @@ const UserProfileSection = (): React.ReactElement => {
   return (
     <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
       <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14">
+        <div className="flex flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14">
           <Image
-            className="flex-shrink-0 w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[620px] h-auto"
-            alt="Jordan Blake"
-            src="/about/Rectangle34624443.png"
+            className="w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[620px] h-auto"
+            alt="Medium business"
+            src="/about/mediumbusiness.png"
             width={620}
             height={480}
           />
 
-          <div className="flex flex-col w-full lg:w-[640px] items-start gap-6 sm:gap-7 md:gap-8 lg:gap-9">
+          <div className="flex flex-col w-full items-start gap-6 sm:gap-7 md:gap-8 lg:gap-9">
             <h2 className="self-stretch text-black text-3xl sm:text-4xl md:text-5xl font-bold font-['Inter'] leading-tight md:leading-[57.60px]">
-              Meet the Founder
+              Optivo Solutions – Mission Statement
             </h2>
 
             <div className="flex flex-col items-start gap-4 sm:gap-5 self-stretch w-full">
               <p className="w-full text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
-                Hi, I&apos;m Jordan Blake, an operations consultant with a passion
-                for helping businesses run smarter, not harder. With over [X] years
-                of experience working across [industry types], I&apos;ve helped
-                startups and scaling businesses streamline their workflows, build
-                efficient systems, and unlock real growth.
+                Our mission is to simplify operations, strengthen delivery, and help growing businesses scale with confidence.
               </p>
 
               <p className="self-stretch text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
-                My approach is rooted in clarity, consistency, and execution. When
-                I&apos;m not solving operational puzzles, you&apos;ll find me [fun
-                fact/hobby].
-              </p>
-            </div>
-
-            <div className="flex flex-col items-start gap-2 sm:gap-3 self-stretch w-full">
-              <p className="text-[#2970ff] text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
-                Signature by the founder:
+                We combine experienced fractional operations leadership, Agile and Scrum-based project management, and customer service management frameworks to build efficient, accountable, and scalable organisations.
               </p>
 
-              <div className="bg-gradient-to-br from-sky-950 to-blue-600 bg-clip-text text-transparent font-['Lavishly_Yours'] text-base sm:text-lg leading-relaxed md:leading-loose">
-                <Image src="/about/Jordan.svg" alt="Jordan Blake" width={100} height={100} className="object-cover" />
+              <div className="flex flex-col items-start gap-3 sm:gap-4 self-stretch w-full">
+                <p className="self-stretch text-neutral-600 text-base sm:text-lg font-medium font-['Inter'] leading-relaxed md:leading-loose">
+                  Optivo helps founders, supervisors, and directors to:
+                </p>
+                <ul className="flex flex-col items-start gap-2 sm:gap-3 self-stretch w-full list-disc list-inside">
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Design clear, efficient operational systems
+                  </li>
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Deliver projects predictably using Agile and Scrum methodologies
+                  </li>
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Build high-performing customer service teams with measurable standards
+                  </li>
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Use data, KPIs, and automation to make better decisions
+                  </li>
+                </ul>
               </div>
+
+              <div className="flex flex-col items-start gap-3 sm:gap-4 self-stretch w-full">
+                <p className="self-stretch text-neutral-600 text-base sm:text-lg font-medium font-['Inter'] leading-relaxed md:leading-loose">
+                  We believe great operations should be:
+                </p>
+                <ul className="flex flex-col items-start gap-2 sm:gap-3 self-stretch w-full list-disc list-inside">
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Simple to understand
+                  </li>
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Structured but flexible
+                  </li>
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Customer-focused
+                  </li>
+                  <li className="text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                    Driven by continuous improvement
+                  </li>
+                </ul>
+              </div>
+
+              <p className="self-stretch text-neutral-600 text-base sm:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                Our purpose is to turn operational complexity into clarity—so teams can execute better, serve customers better, and grow sustainably.
+              </p>
             </div>
           </div>
         </div>
