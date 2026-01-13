@@ -204,9 +204,9 @@ export default function Contact() {
               Location
             </div>
             <div className="text-neutral-600 text-base sm:text-lg font-normal font-sans leading-7">
-              4517 Washington Ave. Manchester,
+            Liverpool, United Kingdom. &
               <br />
-              Kentucky 39495
+              Victoria, Canada.
             </div>
           </div>
         </div>
