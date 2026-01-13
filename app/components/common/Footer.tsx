@@ -62,10 +62,10 @@ const Footer = () => {
                   <div className="justify-start text-white text-lg font-medium font-['Inter'] leading-loose">Email:</div>
                   <Link href="mailto:info@optivo.solutions" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">info@optivo.solutions</Link>
                 </div>
-                <div className='flex flex-col gap-2'>
+                {/* <div className='flex flex-col gap-2'>
                   <div className="justify-start text-white text-lg font-medium font-['Inter'] leading-loose">Phone:</div>
                   <Link href="tel:+8555588886666" className="justify-start text-gray-200 text-base font-normal font-['Inter'] leading-7 cursor-pointer hover:text-white transition-colors">(085) 834-9461</Link>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className='flex gap-3'>
@@ -81,11 +81,11 @@ const Footer = () => {
                 </svg>
               </Link> */}
 
-              <Link href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className='cursor-pointer hover:opacity-80 transition-opacity'>
+              {/* <Link href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className='cursor-pointer hover:opacity-80 transition-opacity'>
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C13.5559 32 11.2399 31.4516 9.16797 30.4717L1.375 31.7705C0.700015 31.883 0.113141 31.2995 0.222656 30.624L1.49707 22.7666C0.536584 20.7114 0 18.4183 0 16C2.06161e-06 7.16346 7.16346 2.26793e-05 16 0ZM11.0215 9.59961C10.2364 9.59985 9.59985 10.2364 9.59961 11.0215C9.59961 17.3053 14.6938 22.3994 20.9775 22.3994C21.763 22.3994 22.3994 21.763 22.3994 20.9775V20.1982C22.3994 19.3804 21.9019 18.6445 21.1426 18.3408L20.3203 18.0127C19.4859 17.679 18.5348 18.0401 18.1328 18.8438C18.1067 18.8385 16.3443 18.4781 14.9326 17.0664C13.5106 15.6442 13.1553 13.8662 13.1553 13.8662C13.9591 13.4642 14.3211 12.5132 13.9873 11.6787L13.6582 10.8564C13.3544 10.0973 12.6185 9.59961 11.8008 9.59961H11.0215Z" fill="white" />
                 </svg>
-              </Link>
+              </Link> */}
 
             </div>
           </div>

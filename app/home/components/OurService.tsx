@@ -36,7 +36,7 @@ const OurService = () => {
                         <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full sm:w-64 md:w-72 lg:w-80 flex flex-col justify-start items-start gap-1 sm:gap-2 md:gap-3 lg:gap-4">
                             <div className="self-stretch flex flex-col justify-start items-end gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
                                 <div className="self-stretch text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold font-roboto leading-tight md:leading-10">Process Optimization</div>
-                                <div className="self-stretch text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg font-normal font-['Inter'] leading-relaxed md:leading-loose">
+                                <div className="self-stretch text-white text-xs sm:text-sm md:text-base lg:text-lg font-medium font-['Inter'] leading-relaxed md:leading-loose">
                                     Build high-performing teams with optimized structures, clear processes.
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ const OurService = () => {
                         <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full sm:w-64 md:w-72 lg:w-80 flex flex-col justify-start items-start gap-1 sm:gap-2 md:gap-3 lg:gap-4">
                             <div className="self-stretch flex flex-col justify-start items-end gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
                                 <div className="self-stretch text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold font-roboto leading-tight md:leading-10">Team Development</div>
-                                <div className="self-stretch text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg font-normal font-roboto leading-relaxed md:leading-loose">
+                                <div className="self-stretch text-white text-xs sm:text-sm md:text-base lg:text-lg font-medium font-roboto leading-relaxed md:leading-loose">
                                     Build high-performing teams with optimized structures, clear processes.
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ const OurService = () => {
                         <div className="group-hover:opacity-100 z-11 opacity-0 transition-opacity duration-500 ease-in-out w-full sm:w-64 md:w-72 lg:w-80 flex flex-col justify-start items-start gap-1 sm:gap-2 md:gap-3 lg:gap-4">
                             <div className="self-stretch flex flex-col justify-start items-end gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
                                 <div className="self-stretch text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold font-roboto leading-tight md:leading-10">Strategic Consulting</div>
-                                <div className="self-stretch text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg font-normal font-roboto leading-relaxed md:leading-loose">
+                                <div className="self-stretch text-white text-xs sm:text-sm md:text-base lg:text-lg font-medium font-roboto leading-relaxed md:leading-loose">
                                     Build high-performing teams with optimized structures, clear processes.
                                 </div>
                             </div>
