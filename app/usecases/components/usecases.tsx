@@ -95,7 +95,7 @@ export default function UseCases() {
               </div>
 
               {/* Get Started Today Card */}
-              <div className="w-full lg:w-[419px] bg-gradient-to-br from-[#00294B] to-[#3C6399] rounded-lg shadow-lg">
+              {/* <div className="w-full lg:w-[419px] bg-gradient-to-br from-[#00294B] to-[#3C6399] rounded-lg shadow-lg">
                 <div className="flex flex-col items-start gap-3 md:gap-3.5 p-4 md:p-6 w-full">
                   <div className="flex flex-col items-start gap-3 md:gap-4 w-full">
                     <h2 className="text-white text-2xl md:text-3xl font-bold font-['Inter'] leading-tight">
@@ -121,7 +121,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Content Area */}

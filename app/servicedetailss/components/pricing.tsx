@@ -26,16 +26,16 @@ export const Pricing = () => {
 
       <div className="flex flex-col w-full lg:w-[106px] items-start gap-4 sm:gap-6">
         <h3 className="text-black text-xl sm:text-2xl md:text-3xl font-medium font-['Inter'] leading-tight md:leading-10">
-          Pricing
+          
         </h3>
 
         <div className="flex flex-col items-start justify-center gap-1 w-full">
           <p className="text-neutral-600 text-sm sm:text-base font-normal font-['Inter'] leading-relaxed">
-            Starting at
+            
           </p>
           <div className="font-semibold">
-            <span className="text-[#2970ff] text-3xl sm:text-4xl font-semibold font-['Inter'] leading-tight sm:leading-[50.40px]">$199</span>
-            <span className="text-[#2970ff] text-base sm:text-lg font-semibold font-['Inter'] leading-relaxed">/</span>
+            <span className="text-[#2970ff] text-3xl sm:text-4xl font-semibold font-['Inter'] leading-tight sm:leading-[50.40px]"></span>
+            <span className="text-[#2970ff] text-base sm:text-lg font-semibold font-['Inter'] leading-relaxed"></span>
           </div>
         </div>
       </div>
