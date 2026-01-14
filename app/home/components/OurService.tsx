@@ -15,7 +15,7 @@ const OurService = () => {
                     <div className="absolute inset-0 bg-[url('/ourService/service-card-1.png')] bg-cover bg-center z-0" />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute top-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-t from-black/30 to-blue-600/40 transition-all duration-500 ease-in-out z-10 origin-top"></div>
+                    <div className="absolute top-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-l from-black/30 to-blue-950 transition-all duration-500 ease-in-out z-10 origin-top"></div>
 
                     {/* Content Wrapper */}
                     <div className="relative z-20 flex flex-col justify-end items-start h-full gap-1 sm:gap-2 md:gap-2.5">
@@ -54,7 +54,7 @@ const OurService = () => {
                     <div className="absolute inset-0 bg-[url('/ourService/service-card-2.png')] bg-cover bg-top z-0" />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute top-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-t from-black/30 to-blue-600/40 transition-all duration-500 ease-in-out z-10 origin-top"></div>
+                    <div className="absolute top-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-l from-black/30 to-blue-950 transition-all duration-500 ease-in-out z-10 origin-top"></div>
 
                     {/* Content Wrapper */}
                     <div className="relative z-20 flex flex-col justify-end items-start h-full gap-1 sm:gap-2 md:gap-2.5">
@@ -93,7 +93,7 @@ const OurService = () => {
                     <div className="absolute  inset-0 bg-[url('/ourService/service-card-3.png')] bg-cover bg-top z-0" />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute top-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-t from-black/30 to-blue-600/40 transition-all duration-500 ease-in-out z-10 origin-top"></div>
+                    <div className="absolute top-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-l from-black/30 to-blue-950 transition-all duration-500 ease-in-out z-10 origin-top"></div>
 
                     {/* Content Wrapper */}
                     <div className="relative z-20 flex flex-col justify-end items-start h-full gap-1 sm:gap-2 md:gap-2.5">
