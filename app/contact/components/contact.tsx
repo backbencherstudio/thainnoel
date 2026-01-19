@@ -69,7 +69,7 @@ export default function Contact() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full lg:w-[636px] p-6 sm:p-8 md:p-10 bg-indigo-50 rounded-lg border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8 md:gap-10"
+            className="w-full lg:w-[636px] p-6 sm:p-8 md:p-10 bg-gray-100 rounded-lg border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8 md:gap-10"
           >
             <div className="self-stretch flex flex-col justify-start items-start gap-3 sm:gap-4">
               <div className="text-slate-950 text-2xl sm:text-3xl font-black font-sans leading-tight sm:leading-tight md:leading-10">
@@ -165,7 +165,7 @@ export default function Contact() {
       {/* Contact Cards */}
       <div className="self-stretch flex flex-col sm:flex-row justify-start items-stretch gap-6 sm:gap-8">
         {/* Email Card */}
-        <div className="flex-1 min-w-0 p-6 sm:p-8 md:p-10 bg-indigo-50 rounded-[20px] border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8">
+        <div className="flex-1 min-w-0 p-6 sm:p-8 md:p-10 bg-gray-50 rounded-[20px] border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8">
           <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 p-2 sm:p-2.5 bg-blue-600 rounded-[32px] flex justify-center items-center flex-shrink-0">
             <Mail className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 text-white" />
           </div>
@@ -180,7 +180,7 @@ export default function Contact() {
         </div>
 
         {/* Phone Card */}
-        <div className="flex-1 min-w-0 p-6 sm:p-8 md:p-10 bg-indigo-50 rounded-[20px] border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8">
+        <div className="flex-1 min-w-0 p-6 sm:p-8 md:p-10 bg-gray-50 rounded-[20px] border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8">
           <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 p-2 sm:p-2.5 bg-blue-600 rounded-[32px] flex justify-center items-center flex-shrink-0">
             <Phone className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 text-white" />
           </div>
@@ -195,7 +195,7 @@ export default function Contact() {
         </div>
 
         {/* Location Card */}
-        <div className="flex-1 min-w-0 p-6 sm:p-8 md:p-10 bg-indigo-50 rounded-[20px] border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8">
+        <div className="flex-1 min-w-0 p-6 sm:p-8 md:p-10 bg-gray-50 rounded-[20px] border border-blue-400 flex flex-col justify-start items-start gap-6 sm:gap-8">
           <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 p-2 sm:p-2.5 bg-blue-600 rounded-[32px] flex justify-center items-center flex-shrink-0">
             <MapPin className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 text-white" />
           </div>
