@@ -6,6 +6,7 @@ import Footer from "./components/common/Footer";
 import ConditionalHero from "./components/common/ConditionalHero";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import CookieConsent from "./components/CookieConsent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           consultationButtonText="Book a Consultation"
         />
         {children}
+        <CookieConsent/>
         <Footer />
         <Toaster position="bottom-right" />
       </body>
